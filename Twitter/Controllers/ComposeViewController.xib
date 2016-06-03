@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ComposeViewController" customModule="Twitter" customModuleProvider="target">
+            <connections>
+                <outlet property="avatarImage" destination="Edk-qA-X0h" id="yoK-gI-EgK"/>
+                <outlet property="charCountLabel" destination="GIq-Gy-gHg" id="Ekd-Vk-m37"/>
+                <outlet property="nameLabel" destination="fQb-lR-zPS" id="EP6-pz-bhS"/>
+                <outlet property="screenNameLabel" destination="m2I-GN-oW0" id="v1f-qa-tOi"/>
+                <outlet property="tweetButton" destination="aSC-No-4HK" id="4hJ-zk-6hS"/>
+                <outlet property="tweetInput" destination="ggc-EJ-5Ii" id="oa6-XE-7j1"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZW-g9-Fi7">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="6Zr-FD-yJh"/>
+                    </constraints>
+                    <items>
+                        <navigationItem id="96U-Zg-Ldl">
+                            <barButtonItem key="leftBarButtonItem" title="Cancel" id="4Nz-iC-vCs">
+                                <connections>
+                                    <action selector="onCancelTapped:" destination="-1" id="Rhf-Yh-OgZ"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem key="rightBarButtonItem" title="Tweet" style="done" id="aSC-No-4HK">
+                                <connections>
+                                    <action selector="onTweetTapped:" destination="-1" id="YKJ-hs-K1f"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="140" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIq-Gy-gHg">
+                    <rect key="frame" x="503" y="33" width="27" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Edk-qA-X0h">
+                    <rect key="frame" x="8" y="74" width="48" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="48" id="eDQ-mP-fau"/>
+                        <constraint firstAttribute="height" constant="48" id="u4X-ac-c5U"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipToBounds" value="YES"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zpx-lm-PR3">
+                    <rect key="frame" x="64" y="74" width="536" height="48"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Manuel Deschamps" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fQb-lR-zPS">
+                            <rect key="frame" x="0.0" y="5" width="536" height="17"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@manuel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2I-GN-oW0">
+                            <rect key="frame" x="0.0" y="24" width="536" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstItem="m2I-GN-oW0" firstAttribute="top" secondItem="fQb-lR-zPS" secondAttribute="bottom" constant="2" id="H9J-mf-K4I"/>
+                        <constraint firstItem="m2I-GN-oW0" firstAttribute="leading" secondItem="Zpx-lm-PR3" secondAttribute="leading" id="HQZ-Yj-upt"/>
+                        <constraint firstItem="fQb-lR-zPS" firstAttribute="leading" secondItem="Zpx-lm-PR3" secondAttribute="leading" id="ald-C9-zfB"/>
+                        <constraint firstAttribute="trailing" secondItem="fQb-lR-zPS" secondAttribute="trailing" id="idi-rQ-Iqj"/>
+                        <constraint firstAttribute="trailing" secondItem="m2I-GN-oW0" secondAttribute="trailing" id="uI1-e2-Lav"/>
+                        <constraint firstItem="fQb-lR-zPS" firstAttribute="top" secondItem="Zpx-lm-PR3" secondAttribute="top" constant="5" id="xzj-ls-dcF"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="5" left="0.0" bottom="8" right="0.0"/>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggc-EJ-5Ii">
+                    <rect key="frame" x="8" y="130" width="576" height="200"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="Cq8-8a-xBQ"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="twitter"/>
+                </textView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Zpx-lm-PR3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="3AE-Up-yvC"/>
+                <constraint firstAttribute="trailing" secondItem="Zpx-lm-PR3" secondAttribute="trailing" id="C55-WP-cBX"/>
+                <constraint firstAttribute="trailing" secondItem="cZW-g9-Fi7" secondAttribute="trailing" id="CSz-a7-hzD"/>
+                <constraint firstItem="Zpx-lm-PR3" firstAttribute="height" secondItem="Edk-qA-X0h" secondAttribute="height" id="H7V-xR-dWj"/>
+                <constraint firstAttribute="trailing" secondItem="ggc-EJ-5Ii" secondAttribute="trailing" constant="16" id="KFE-WV-2ee"/>
+                <constraint firstAttribute="trailing" secondItem="GIq-Gy-gHg" secondAttribute="trailing" constant="70" id="OiQ-La-P1Y"/>
+                <constraint firstItem="Zpx-lm-PR3" firstAttribute="leading" secondItem="Edk-qA-X0h" secondAttribute="trailing" constant="8" id="PXm-S2-aEo"/>
+                <constraint firstItem="Edk-qA-X0h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="YEf-3a-rvS"/>
+                <constraint firstItem="ggc-EJ-5Ii" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="ZXR-Op-Nx5"/>
+                <constraint firstItem="GIq-Gy-gHg" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="33" id="bSt-aR-scs"/>
+                <constraint firstItem="Edk-qA-X0h" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="f8E-KO-vIa"/>
+                <constraint firstItem="cZW-g9-Fi7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ql0-E6-bww"/>
+                <constraint firstItem="cZW-g9-Fi7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qu3-ff-juD"/>
+                <constraint firstItem="ggc-EJ-5Ii" firstAttribute="top" secondItem="Edk-qA-X0h" secondAttribute="bottom" constant="8" id="xVI-44-Ykq"/>
+            </constraints>
+            <edgeInsets key="layoutMargins" top="28" left="8" bottom="8" right="8"/>
+        </view>
+    </objects>
+</document>
